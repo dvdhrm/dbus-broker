@@ -127,6 +127,9 @@ conf.set('bindir', join_paths(get_option('prefix'), get_option('bindir')))
 cargo = custom_target(
         'cargo',
         kwargs: mod_cargo.get_variable('build_dict') + {
+                'env': mod_cargo.get_variable('build_env') + {
+                        'DBRK_VERSION': meson.project_version(),
+                },
                 'input': meson.project_source_root() / 'Cargo.toml',
                 'output': [
                         'libdbus_broker.a',

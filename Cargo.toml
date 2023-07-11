@@ -24,3 +24,7 @@ autobins = false
 autoexamples = false
 autotests = false
 autobenches = false
+
+[dependencies]
+clap = { version = "4.3" }
+libc = { version = "0.2" }
