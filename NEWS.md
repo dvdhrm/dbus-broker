@@ -1,5 +1,18 @@
 # dbus-broker - Linux D-Bus Message Broker
 
+## CHANGES WITH 36:
+
+        * Fix possible file-descriptor use-after-close, which can lead to
+          broker termination or disclosure of internal file-desciptors to
+          clients.
+
+        * Be more verbose about activation failures and include suitable
+          information in related log messages.
+
+        Contributions from: Camron Carter, David Rheinsberg, Jake Dane
+
+        - Dußlingen, 2024-04-11
+
 ## CHANGES WITH 35:
 
         * Fix crash on startup/reload when corrupt configuration or
