@@ -1,0 +1,4 @@
+[wrap-git]
+patch_directory = libc-rs
+revision = libc-0.2
+url = https://github.com/rust-lang/libc.git
