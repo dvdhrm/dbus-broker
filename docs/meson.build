@@ -16,4 +16,12 @@ if use_launcher
                  install: true,
                  install_dir: join_paths(get_option('mandir'), 'man1')
         )
+        custom_target(
+                'man-dbus-broker-session',
+                 output: 'dbus-broker-session.1',
+                 input: 'dbus-broker-session.rst',
+                 command: [prog_rst2man, '@INPUT@', '@OUTPUT@'],
+                 install: true,
+                 install_dir: join_paths(get_option('mandir'), 'man1')
+        )
 endif
